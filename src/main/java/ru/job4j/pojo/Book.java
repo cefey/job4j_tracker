@@ -9,6 +9,13 @@ public class Book {
         this.countList = countList;
     }
 
+    public int getCountList() {
+        return countList;
+    }
+
+    public void setCountList(int countList) {
+        this.countList = countList; }
+
     public String getName() {
         return name;
     }
@@ -16,12 +23,5 @@ public class Book {
     public void setName(String name) {
         this.name = name;
     }
-
-    public int getCountList() {
-        return countList;
-    }
-
-    public void setCountList(int countList) {
-        this.countList = countList; }
 
 }

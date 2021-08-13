@@ -12,14 +12,16 @@ public class Library {
         books[2] = deepToSpring;
         books[3] = effectiveJava;
         for (int i = 0; i < books.length; i++) {
-            System.out.println("Название книги " + books[i].getName() + ". Количество страниц " + books[i].getCountList());
+            Book bk = books[i];
+            System.out.println("Название книги " + bk.getName() + ". Количество страниц " + bk.getCountList());
         }
         System.out.println("Меняем книги в массиве");
         Book swap = books[0];
         books[0] = books[3];
         books[3] = swap;
         for (int i = 0; i < books.length; i++) {
-            System.out.println("Название книги " + books[i].getName() + ". Количество страниц " + books[i].getCountList());
+            Book bk = books[i];
+            System.out.println("Название книги " + bk.getName() + ". Количество страниц " + bk.getCountList());
         }
         for (int i = 0; i < books.length; i++) {
             if (books[i].getName() == "Clean Code") {

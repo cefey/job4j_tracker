@@ -11,21 +11,20 @@ public class Library {
         books[1] = cleanCode;
         books[2] = deepToSpring;
         books[3] = effectiveJava;
-        for (int i = 0; i < books.length; i++) {
-            Book bk = books[i];
+        for (Book bk:books) {
             System.out.println("Название книги " + bk.getName() + ". Количество страниц " + bk.getCountList());
         }
         System.out.println("Меняем книги в массиве");
         Book swap = books[0];
         books[0] = books[3];
         books[3] = swap;
-        for (int i = 0; i < books.length; i++) {
-            Book bk = books[i];
+        for (Book bk:books) {
             System.out.println("Название книги " + bk.getName() + ". Количество страниц " + bk.getCountList());
         }
-        for (int i = 0; i < books.length; i++) {
-            if (books[i].getName() == "Clean Code") {
-                System.out.println("Название \"Clean Code\" имеет книга под индексом " + i);
+        System.out.println("Перечень книг");
+        for (Book bk:books) {
+            if (bk.getName().equals("Clean Code")) {
+                System.out.println(bk.getName());
             }
 
         }

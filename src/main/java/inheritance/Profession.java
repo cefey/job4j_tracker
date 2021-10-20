@@ -15,22 +15,4 @@ public class Profession {
         this.birthday = birthday;
     }
 }
-//    public Profession() {
-//
-//    }
-//
-//    public String getName() {
-//    }
-//
-//    public String getSurname() {
-//
-//    }
-//
-//    public String getEducation() {
-//
-//    }
-//
-//    public Date getBirthday() {
-//
-//    }
-//}
+

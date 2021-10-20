@@ -32,12 +32,11 @@ public class Tracker {
     }
 
     public Item[] findByName(String key) {
-        Item[] first = findAll();
         Item[] rls = new Item[size];
         int inc = 0;
-        for (int i = 0; i < first.length; i++) {
-            if (first[i].getName().equals(key)) {
-                rls[inc++] = first[i];
+        for (int i = 0; i < size; i++) {
+            if (items[i].getName().equals(key)) {
+                rls[inc++] = items[i];
             }
         }
         return  Arrays.copyOf(rls, inc);

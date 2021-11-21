@@ -14,19 +14,23 @@ public class Tracker {
         return item;
     }
 
-    public Item findById(int id) {
-        Item rsl = null;
-        for (int index = 0; index < size; index++) {
-            Item item = items[index];
-            if (item.getId() == id) {
-                rsl = item;
-                break;
-            }
+    public boolean replace(int id, Item item) {
+        int index = indexOf(id);
+        if (index != -1) {
+            item.setId(id);
+            items[index] = item;
+            return true;
         }
-        return rsl;
+        return false;
     }
 
-   /*получение списка всех заявок*/
+    public Item findById(int id) {
+    /* Находим индекс */
+    int index = indexOf(id);
+    /* Если индекс найден возвращаем item, иначе null */
+    return index != -1 ? items[index] : null;
+    }
+
     public Item[] findAll() {
         return  Arrays.copyOf(items, size);
     }
@@ -42,4 +46,14 @@ public class Tracker {
         return  Arrays.copyOf(rls, inc);
     }
 
+    private int indexOf(int id) {
+        int rsl = -1;
+        for (int index = 0; index < size; index++) {
+            if (items[index].getId() == id) {
+                rsl = index;
+                break;
+            }
+        }
+        return rsl;
+    }
 }

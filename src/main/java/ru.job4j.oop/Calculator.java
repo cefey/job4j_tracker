@@ -1,6 +1,5 @@
 package ru.job4j.oop;
 
-@SuppressWarnings("checkstyle:WhitespaceAround")
 public class Calculator {
 
     private static int x = 5;
@@ -30,7 +29,11 @@ public class Calculator {
         System.out.println(result);
         Calculator calculator = new Calculator();
         int rsl = calculator.multiply(5);
-        double reslt = calculator.sumAllOperation(12);
-        System.out.println(reslt);
+        int rslMinus = minus(6);
+        System.out.println(rslMinus);
+        double rslDivide = calculator.divide(10);
+        System.out.println(rslDivide);
+        double resltSum = calculator.sumAllOperation(12);
+        System.out.println(resltSum);
     }
 }

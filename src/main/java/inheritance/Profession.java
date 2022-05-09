@@ -7,6 +7,11 @@ public class Profession {
     private String surname;
     private String education;
     private Date birthday;
+    private boolean degree;
+
+    public Profession(boolean degree) {
+        this.degree = degree;
+    }
 
     public Profession(String name, String surname, String education, Date birthday) {
         this.name = name;
